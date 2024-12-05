@@ -22,6 +22,8 @@ module.exports = tseslint.config(
           style: "camelCase",
         },
       ],
+      "@angular-eslint/prefer-standalone": 0,
+      "@typescript-eslint/no-explicit-any": 1,
       "@angular-eslint/component-selector": [
         "error",
         {
