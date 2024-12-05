@@ -18,4 +18,8 @@ export class ProductListComponent implements OnInit {
       this.products = data.products || [];
     });
   }
+
+  trackByProductId(index: number, product: any): number {
+    return product.id;
+  }
 }
