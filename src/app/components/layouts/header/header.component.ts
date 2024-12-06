@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { SidebarService } from '@services/sidebar.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,9 @@ export class HeaderComponent {
   @Input() opened = false;
   @Output() toggleSidebar = new EventEmitter<void>();
 
+  constructor(private sidebarService: SidebarService) {}
+
   onToggleSidebar() {
-    this.toggleSidebar.emit();
+    this.sidebarService.toggleSidebar();
   }
 }
