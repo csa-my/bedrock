@@ -1,14 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-container',
+  selector: 'app-header',
   standalone: false,
-  templateUrl: './container.component.html',
-  styleUrls: ['./container.component.scss'],
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
 })
-export class ContainerComponent {
+export class HeaderComponent {
   @Input() opened = false;
-
   @Output() toggleSidebar = new EventEmitter<void>();
 
   onToggleSidebar() {

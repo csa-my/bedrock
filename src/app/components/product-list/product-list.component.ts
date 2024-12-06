@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
-import { ProductResponse } from '../../interfaces/product-response';
+import { Product, ProductResponse } from '@app/interfaces/product-response';
+import { ProductService } from '@app/services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  trackByProductId(index: number, product: any): number {
+  trackByProductId(index: number, product: Product): number {
     return product.id;
   }
 }
