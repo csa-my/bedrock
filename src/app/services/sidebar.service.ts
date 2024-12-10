@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
+
 export class SidebarService {
   private toggleSidebarSource = new Subject<void>();
   toggleSidebar$ = this.toggleSidebarSource.asObservable();
