@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { ContainerComponent } from './components/layouts/container/container.component';
 import { SidebarComponent } from './components/layouts/sidebar/sidebar.component';
 import { HeaderComponent } from './components/layouts/header/header.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HeaderComponent } from './components/layouts/header/header.component';
     ContainerComponent,
     SidebarComponent,
     HeaderComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

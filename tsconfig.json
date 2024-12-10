@@ -23,6 +23,7 @@
       "@interfaces/*": ["./src/app/interfaces/*"],
       "@components/*": ["./src/app/components/*"],
       "@layouts/*": ["./src/app/components/layouts/*"],
+      "@pages/*": ["./src/app/pages/*"],
     }
   },
   "angularCompilerOptions": {

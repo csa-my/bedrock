@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SidebarService } from '@services/sidebar.service';
 
 @Component({
@@ -10,11 +11,11 @@ import { SidebarService } from '@services/sidebar.service';
 export class SidebarComponent implements OnInit {
   opened = true;
   menuItems = [
-    { link: '/home', icon: 'home', text: 'Home' },
+    { link: '/', icon: 'home', text: 'Home' },
     { link: '/about', icon: 'info', text: 'About' },
   ];
 
-  constructor(private sidebarService: SidebarService) {}
+  constructor(private sidebarService: SidebarService, private router: Router) {}
 
   ngOnInit() {
     this.sidebarService.toggleSidebar$.subscribe(() => {
@@ -24,5 +25,9 @@ export class SidebarComponent implements OnInit {
 
   toggleSidebar() {
     this.opened = !this.opened;
+  }
+
+  navigate(link: string) {
+    this.router.navigate([link]);
   }
 }
