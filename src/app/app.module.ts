@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ContainerComponent } from './components/layouts/container/container.component';
 import { SidebarComponent } from './components/layouts/sidebar/sidebar.component';
 import { HeaderComponent } from './components/layouts/header/header.component';
@@ -33,7 +34,8 @@ import { AboutComponent } from './pages/about/about.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-],
+    MatToolbarModule,
+  ],
   providers: [
     provideClientHydration(withEventReplay()),
     provideHttpClient(withInterceptorsFromDi(), withFetch()),
