@@ -16,6 +16,8 @@ import { ContainerComponent } from './components/layouts/container/container.com
 import { SidebarComponent } from './components/layouts/sidebar/sidebar.component';
 import { HeaderComponent } from './components/layouts/header/header.component';
 import { AboutComponent } from './pages/about/about.component';
+import { BaseChartDirective, provideCharts, withDefaultRegisterables } from 'ng2-charts';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { AboutComponent } from './pages/about/about.component';
     SidebarComponent,
     HeaderComponent,
     AboutComponent,
+    BarChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,11 +38,13 @@ import { AboutComponent } from './pages/about/about.component';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
+    BaseChartDirective,
   ],
   providers: [
     provideClientHydration(withEventReplay()),
     provideHttpClient(withInterceptorsFromDi(), withFetch()),
     provideAnimationsAsync(),
+    provideCharts(withDefaultRegisterables()),
   ],
   bootstrap: [AppComponent],
 })
